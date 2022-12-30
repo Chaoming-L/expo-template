@@ -1,21 +1,34 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet, Text } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+import { ImageBackground, TouchableOpacity, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const IntroScreen = () => (
-  <SafeAreaView style={styles.container}>
-    <Text>go go go!</Text>
-    <StatusBar style="auto" />
-  </SafeAreaView>
-);
+const Intro = () => {
+  return (
+    <ImageBackground
+      source={require('assets/sign-in/intro.png')}
+      style={styles.img}
+    >
+      <TouchableOpacity>
+        <View style={styles.button}>
+          <Text>Enter</Text>
+        </View>
+      </TouchableOpacity>
+    </ImageBackground>
+  );
+};
 
-export default IntroScreen;
+export default Intro;
 
 const styles = StyleSheet.create({
-  container: {
+  img: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  button: {
+    fontSize: 30,
+    padding: 12,
+    width: 200,
+    backgroundColor: 'white',
+    textAlign: 'center',
   },
 });

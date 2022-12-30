@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "screens": ["./src/screens"],
+      "assets": ["./assets"],
       "*": ["./src/*"]
   }
   },
